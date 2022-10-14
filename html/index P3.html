@@ -13,11 +13,14 @@
         <h3>Cotizacion</h3>
 
         <div id="contenido">
-            <div id="contenedorCampos">
+            <div id="contenedor-campos">
                 <div class="campo">
                     <label>Valor del Automovil</label>
                     <br>
-                    <input class="Valortext" id="valorAuto" type="text" placeholder="">
+                    <div id="contenedor-valor">
+                        <input class="Valortext" id="valorAuto" type="number" placeholder="Valor Automovil">
+                        <label id="errorValor" style="color: brown; visibility: hidden;">*</label>
+                    </div>
                 </div>
                 <div class="campo">
                     <label>Enganche</label>
@@ -54,6 +57,23 @@
         </div>
 
     </section>
+    <script>
+        const btnCalcular = document.querySelector("#btnCalcular");
 
+        btnCalcular.addEventListener('click',()=>{
+
+            valor = document.querySelector("#valorAuto").value;
+            errorValor = document.querySelector("#errorValor");
+
+            valor== "" ? errorValor.style.visibility = 'visible': errorValor.style.visibility = 'hidden' ;
+
+            if(valor==0){
+
+                alert("Favor de capturar los datos solicitados");
+
+            }
+
+        })
+    </script>
 </body>
 </html>
