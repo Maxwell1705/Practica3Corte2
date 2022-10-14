@@ -5,8 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica3 U2</title>
+    <link rel="stylesheet" href="/css/cssP3.css">
+    <script src="/js/mainP3.js"></script>
 </head>
 <body>
-    
+    <section id="contenedor-cotizacion">
+        <h3>Cotizacion</h3>
+
+        <div id="contenido">
+            <div id="contenedorCampos">
+                <div class="campo">
+                    <label>Valor del Automovil</label>
+                    <br>
+                    <input class="Valortext" id="valorAuto" type="text" placeholder="">
+                </div>
+                <div class="campo">
+                    <label>Enganche</label>
+                    <br>
+                    <p id="pEnganche"></p>
+                </div>
+                <div class="campo">
+                    <label>Total a Financiar</label>
+                    <br>
+                    <p id="pFinanciar"></p>
+                </div>
+                <div class="campo">
+                    <label>Planes de Credito</label>
+                    <br>
+                    <select name="pagoM" id="pagoM">
+
+                        <option value="12">12 Meses</option>
+                        <option value="18">18 Meses</option>
+                        <option value="24">24 Meses</option>
+                        <option value="36">36 Meses</option>
+                        <option value="48">48 Meses</option>
+                
+                    </select>
+                    <label>Pago Mensual</label>
+                    <p id="pMensual"></p>
+
+                </div>
+            </div>
+                
+            <div id="contenedor-de-botones">
+                <button id="btnLimpiar" onclick="limpiar()">Limpiar</button>
+                <button id="btnCalcular" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+
+    </section>
+
 </body>
 </html>
